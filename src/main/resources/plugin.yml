@@ -1,0 +1,9 @@
+name: RewardBags
+version: ${project.version}
+main: me.lojosho.rewardbags.RewardBags
+api-version: 1.16
+prefix: RewardBags
+authors: [ LoJoSho ]
+description: RewardBags
+website: LoJoSho.com
+depend: [Votifier, Vault]
