@@ -24,8 +24,8 @@ public class PlayerOpenBag implements Listener {
 
     @EventHandler
     public void onPlayerInteraction(PlayerInteractEvent event) {
-        String player = event.getPlayer().getName();
-        if (!event.getItem().getItemMeta().getItemFlags() == null) {
+        if (event.hasItem()) {
+            String player = event.getPlayer().getName();
             if (event.getItem().getItemMeta().getDisplayName().contains("Voting Reward Bag!")) {
                 if (event.getItem().getItemMeta().hasItemFlag(ItemFlag.HIDE_ATTRIBUTES)) {
                     EconomyResponse r = econ.depositPlayer(player, RandomMoney());
